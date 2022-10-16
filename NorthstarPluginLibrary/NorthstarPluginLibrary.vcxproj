@@ -110,6 +110,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>Z:\tf2dev\Titanfall2\R2Northstar\plugins\$(TargetName)$(TargetExt)</OutputFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -128,9 +129,11 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>Z:\tf2dev\Titanfall2\R2Northstar\plugins\$(TargetName)$(TargetExt)</OutputFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="lib\plugin.h" />
     <ClInclude Include="loader.h" />
     <ClInclude Include="dllmain.h" />
     <ClInclude Include="include\spdlog\async.h" />
@@ -233,6 +236,7 @@
     <ClInclude Include="resource1.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="lib\plugin.cpp" />
     <ClCompile Include="lib\squirrel.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="loader.cpp" />
