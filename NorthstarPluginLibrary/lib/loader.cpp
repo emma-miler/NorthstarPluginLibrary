@@ -1,5 +1,5 @@
 #include "loader.h"
-#include "plugin.h"
+#include "lib.h"
 
 #include "squirrel.h"
 #include <iostream>

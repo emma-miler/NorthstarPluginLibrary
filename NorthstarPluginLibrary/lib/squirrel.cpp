@@ -2,7 +2,7 @@
 #include <map>
 #include <string>
 #include "squirrel.h"
-#include "plugin.h"
+#include "lib.h"
 #include "plugin_abi.h"
 
 const char* GetContextName(ScriptContext context)

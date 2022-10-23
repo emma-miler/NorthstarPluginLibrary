@@ -1,4 +1,4 @@
-#include "plugin.h"
+#include "lib.h"
 #include "plugin_abi.h"
 
 #include "../pch.h"

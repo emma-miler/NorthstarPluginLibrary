@@ -1,7 +1,7 @@
 #pragma once
 
 #include "../pch.h"
-#include "plugin.h"
+#include "lib.h"
 
 template<typename Mutex>
 class sink : public spdlog::sinks::base_sink <Mutex>

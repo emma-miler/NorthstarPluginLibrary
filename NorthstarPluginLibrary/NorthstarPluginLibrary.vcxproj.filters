@@ -339,7 +339,7 @@
     <ClInclude Include="resource1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="lib\plugin.h">
+    <ClInclude Include="lib\lib.h">
       <Filter>Header Files\Library</Filter>
     </ClInclude>
     <ClInclude Include="lib\loader.h">
@@ -359,11 +359,14 @@
     <ClCompile Include="dllmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="lib\plugin.cpp">
+    <ClCompile Include="lib\lib.cpp">
       <Filter>Source Files\Library</Filter>
     </ClCompile>
     <ClCompile Include="lib\loader.cpp">
       <Filter>Source Files\Library</Filter>
+    </ClCompile>
+    <ClCompile Include="plugin.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

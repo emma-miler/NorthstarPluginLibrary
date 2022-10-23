@@ -12,6 +12,8 @@ class Plugin {
 		logger_t logger;
 		void Init(PluginInitFuncs* funcs, PluginNorthstarData* data);
 
+		void Main();
+
 	private:
 		PLUGIN_REQUESTS_SERVER_DATA_TYPE _RequestServerData;
 		PLUGIN_REQUESTS_GAMESTATE_DATA_TYPE _RequestGameStateData;
