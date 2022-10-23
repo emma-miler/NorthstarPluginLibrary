@@ -1,6 +1,7 @@
 {
 	"name": "Northstar.DiscordRPC",
 	"displayname": "DiscordRPC",
+	"dependencyName": "DiscordRPC",
 	"description": "Discord Rich Presence for Northstar",
 	"api_version": "2",
 	"version": "1.0",

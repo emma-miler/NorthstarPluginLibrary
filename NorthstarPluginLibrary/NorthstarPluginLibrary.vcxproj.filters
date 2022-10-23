@@ -336,13 +336,16 @@
     <ClInclude Include="dllmain.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="loader.h">
-      <Filter>Header Files\Library</Filter>
-    </ClInclude>
     <ClInclude Include="resource1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="lib\plugin.h">
+      <Filter>Header Files\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\loader.h">
+      <Filter>Header Files\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\logging.h">
       <Filter>Header Files\Library</Filter>
     </ClInclude>
   </ItemGroup>
@@ -353,10 +356,10 @@
     <ClCompile Include="dllmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="loader.cpp">
+    <ClCompile Include="lib\plugin.cpp">
       <Filter>Source Files\Library</Filter>
     </ClCompile>
-    <ClCompile Include="lib\plugin.cpp">
+    <ClCompile Include="lib\loader.cpp">
       <Filter>Source Files\Library</Filter>
     </ClCompile>
   </ItemGroup>

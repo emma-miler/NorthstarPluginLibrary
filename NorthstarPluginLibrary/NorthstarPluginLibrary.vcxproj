@@ -133,8 +133,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="lib\loader.h" />
+    <ClInclude Include="lib\logging.h" />
     <ClInclude Include="lib\plugin.h" />
-    <ClInclude Include="loader.h" />
     <ClInclude Include="dllmain.h" />
     <ClInclude Include="include\spdlog\async.h" />
     <ClInclude Include="include\spdlog\async_logger-inl.h" />
@@ -236,10 +237,10 @@
     <ClInclude Include="resource1.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="lib\loader.cpp" />
     <ClCompile Include="lib\plugin.cpp" />
     <ClCompile Include="lib\squirrel.cpp" />
     <ClCompile Include="dllmain.cpp" />
-    <ClCompile Include="loader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="include\spdlog\fmt\bundled\LICENSE.rst" />

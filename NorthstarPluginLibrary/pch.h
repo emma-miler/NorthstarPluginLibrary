@@ -8,8 +8,6 @@
 
 #include "lib/plugin_abi.h"
 
-#include "lib/plugin.h"
-
 #define DLLEXPORT __declspec(dllexport)
 #define EXPORT extern "C" DLLEXPORT
 

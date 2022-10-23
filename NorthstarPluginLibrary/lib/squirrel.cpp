@@ -2,6 +2,7 @@
 #include <map>
 #include <string>
 #include "squirrel.h"
+#include "plugin.h"
 #include "plugin_abi.h"
 
 const char* GetContextName(ScriptContext context)
@@ -107,6 +108,11 @@ template <ScriptContext context> void SquirrelManager<context>::VMCreated(CSquir
 	g_pSquirrel<context>->messageBuffer = new SquirrelMessageBuffer();
 }
 
+template <ScriptContext context> void SquirrelManager<context>::VMDestroyed()
+{
+	m_pSQVM = nullptr;
+}
+
 template <ScriptContext context> void SquirrelManager<context>::ExecuteCode(const char* pCode)
 {
 	if (!m_pSQVM || !m_pSQVM->sqvm)
@@ -178,11 +184,13 @@ template <size_t N> struct TemplateStringLiteral
 	char value[N];
 };
 
-template <ScriptContext context> SQRESULT SQ_Test(HSquirrelVM* sqvm)
+template <ScriptContext context> 
+SQRESULT SQ_Test(HSquirrelVM* sqvm) 
 {
-	g_pSquirrel<context>->schedule_call("do_test");
+	g_pPlugin->RequestGameStateData();
 	return SQRESULT_NOTNULL;
-}
+};
+
 
 void InitializeSquirrelVM_CLIENT(SquirrelFunctions* funcs)
 {
@@ -261,7 +269,7 @@ void InitializeSquirrelVM_CLIENT(SquirrelFunctions* funcs)
 	g_pSquirrel<ScriptContext::CLIENT>->__sq_schedule_call_external = funcs->__sq_schedule_call_external;
 	g_pSquirrel<ScriptContext::UI>->__sq_schedule_call_external = funcs->__sq_schedule_call_external;
 
-	g_pSquirrel<ScriptContext::UI>->AddFuncRegistration("void", "plugin", "", "", SQ_Test<ScriptContext::UI>);
+	g_pSquirrel<ScriptContext::CLIENT>->AddFuncRegistration("void", "plget", "", "", SQ_Test<ScriptContext::CLIENT>);
 }
 
 void InitializeSquirrelVM_SERVER(SquirrelFunctions * funcs)
