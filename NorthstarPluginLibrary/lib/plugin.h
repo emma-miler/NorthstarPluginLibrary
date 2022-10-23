@@ -2,6 +2,7 @@
 
 #include "plugin_abi.h"
 #include "loader.h"
+#include "util.h"
 
 typedef void (*logger_t)(void*);
 
@@ -20,6 +21,12 @@ class Plugin {
 		void RequestServerData();
 		void RequestGameStateData();
 		void RequestRPCData();
+
+		void LoadServerData(PluginServerData* data);
+		void LoadGameStateData(PluginGameStateData* data);
+
+		ServerDataClass* server;
+		GameStateDataClass* gameState;
 };
 
 extern Plugin* g_pPlugin;

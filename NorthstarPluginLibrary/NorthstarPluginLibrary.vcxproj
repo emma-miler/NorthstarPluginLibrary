@@ -231,6 +231,7 @@
     <ClInclude Include="lib\squirrel.h" />
     <ClInclude Include="lib\squirrelclasstypes.h" />
     <ClInclude Include="lib\squirreldatatypes.h" />
+    <ClInclude Include="lib\util.h" />
     <ClInclude Include="lib\vector.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="resource.h" />

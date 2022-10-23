@@ -348,6 +348,9 @@
     <ClInclude Include="lib\logging.h">
       <Filter>Header Files\Library</Filter>
     </ClInclude>
+    <ClInclude Include="lib\util.h">
+      <Filter>Header Files\Library</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="lib\squirrel.cpp">

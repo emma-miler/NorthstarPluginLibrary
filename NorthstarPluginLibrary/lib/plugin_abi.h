@@ -85,10 +85,10 @@ struct PluginNorthstarData {
 };
 
 struct PluginServerData {
-	const char* id;
-	const char* name;
-	const char* description;
-	const char* password; // NOTE: May be empty
+	char id[256];
+	char name[256];
+	char description[2048];
+	char password[256]; // NOTE: May be empty
 
 	bool is_local;
 };
